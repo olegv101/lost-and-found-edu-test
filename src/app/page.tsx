@@ -18,7 +18,7 @@ export default function Home() {
             />
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-center mb-6">
-            Rohan's Cal Lost & Found
+            DJ's Cal Lost & Found
           </h1>
           <p className="text-xl md:text-2xl text-center mb-8 max-w-2xl text-[#FDB515]">
             Reconnecting Golden Bears with their belongings
