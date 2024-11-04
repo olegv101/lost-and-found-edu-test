@@ -48,7 +48,7 @@ export default function Home() {
                   Bounty: $20
                 </div>
                 <Link
-                  href={`/claim/1`}
+                  href={`/claim?id=1`}
                   className="block w-full bg-[#003262] text-white py-2 rounded-lg hover:bg-[#004280] transition text-center"
                 >
                   Claim Item
@@ -73,7 +73,7 @@ export default function Home() {
                   Bounty: $10
                 </div>
                 <Link
-                  href={`/claim/2`}
+                  href={`/claim?id=2`}
                   className="block w-full bg-[#003262] text-white py-2 rounded-lg hover:bg-[#004280] transition text-center"
                 >
                   Claim Item
@@ -98,7 +98,7 @@ export default function Home() {
                   Bounty: $50
                 </div>
                 <Link
-                  href={`/claim/3`}
+                  href={`/claim?id=3`}
                   className="block w-full bg-[#003262] text-white py-2 rounded-lg hover:bg-[#004280] transition text-center"
                 >
                   Claim Item
