@@ -2,6 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import ClaimForm from '@/app/components/ClaimForm';
+import { Suspense } from 'react';
 
 const items = {
   '1': { id: '1', name: 'AirPods Pro', location: 'Doe Library' },
@@ -9,7 +10,7 @@ const items = {
   '3': { id: '3', name: 'MacBook Pro', location: 'Soda Hall' },
 };
 
-export default function ClaimPage() {
+function ClaimPageContent() {
   const searchParams = useSearchParams();
   const itemId = searchParams.get('id');
   const item = itemId ? items[itemId as keyof typeof items] : null;
@@ -36,5 +37,19 @@ export default function ClaimPage() {
         />
       </div>
     </div>
+  );
+}
+
+export default function ClaimPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    }>
+      <ClaimPageContent />
+    </Suspense>
   );
 }
